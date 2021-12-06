@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <title>Portfolio 1</title>
+<body onload="numberFunction()">
+
+<p id="tot"></p> <br>
+<p id="max"></p>
+
+<script>
+function numberFunction() {
+  var main_number = prompt("Enter a Positive Integer", "");
+  if (main_number > 0) {
+    var numbers = parseInt("0");
+    var current_number = parseInt("0");
+    var max_num = parseInt("0");
+    var i;
+
+    for (i=0; i < main_number; i++) {
+        var num = parseInt(prompt("Enter a Positive Integer", ""));
+        numbers += num;
+        current_number = num; 
+
+        if (max_num < current_number) {
+            max_num = current_number;
+        }
+      }
+      document.getElementById("tot").innerHTML = "Your Total is " + numbers + "!";
+      document.getElementById("max").innerHTML = "Your Highest Number is " + max_num + "!";
+  }
+}
+</script>
+
+</body>
+</html>

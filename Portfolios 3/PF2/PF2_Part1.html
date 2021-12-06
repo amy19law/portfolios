@@ -1,0 +1,56 @@
+<html>
+  <title>Portfolio 2</title>
+<body>
+
+<form>
+  <div class="textFields">
+
+  <label for="text1">Text 1:</label><br>
+  <input type="text" class="text" name="text1"><br>
+
+  <label for="text2">Text 2:</label><br>
+  <input type="text" class="text" name="text2"><br>
+
+  <label for="text3">Text 3:</label><br>
+  <input type="text" class="text" name="text3"><br>
+
+  <label for="text4">Text 4:</label><br>
+  <input type="text" class="text" name="text4"><br>
+
+  <label for="text5">Text 5:</label><br>
+  <input type="text" class="text" name="text5"><br>
+
+  <label for="text6">Text 6:</label><br>
+  <input type="text" class="text" name="text6"><br>
+
+  <br>
+
+  <input type="button" name="displayButton" value="Display"><br>
+
+  <br>
+  <br>
+
+  <label for="textResult">Text Result</label><br>
+  <input type="text" id="textResult" name="textResult"><br>
+
+  <br>
+
+  </div>
+</form>
+
+
+<script>
+  let displayButton = document.querySelector('.textFields input[name="displayButton"]');
+  let result = document.querySelector('#textResult');
+  let container = document.querySelector('.textFields');
+  
+  displayButton.onclick = function() {
+    let x = document.querySelectorAll('.textFields .text');
+    result.value = '';
+    for (i = 0; i < x.length; i++) {
+    result.value += x[i].value + ' ';
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <title>Portfolio 1</title>
+<body onload="numberFunction()">
+
+<p id="tot"></p>
+
+<script>
+function numberFunction() {
+  var main_number = prompt("Enter a Positive Integer", "");
+  if (main_number > 0) {
+    var numbers = parseInt("0");
+    var i = 0;
+
+    while (i < main_number) {
+        var num = parseInt(prompt("Enter a Positive Integer", ""));
+        numbers += num; 
+        i++
+      }
+      document.getElementById("tot").innerHTML = "Your Total is " + numbers + "!";
+  }
+}
+</script>
+
+</body>
+</html>
